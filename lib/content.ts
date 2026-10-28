@@ -61,12 +61,10 @@ export const industriesMenu = {
   all: { label: "Alle Branches", href: "/industrieen-die-we-bedienen/" },
 };
 
-export const languages: NavLink[] = [
-  { label: "Nederlands", href: "https://cloudconnected.nl/" },
-  { label: "English", href: "https://en.cloudconnected.nl/" },
-  { label: "Español", href: "https://cloudconnected.es/" },
-  { label: "Català", href: "https://cat.cloudconnected.es/" },
-  { label: "English (ES)", href: "https://en.cloudconnected.es/" },
+// Dutch is this site's (default) language; English is the existing English site.
+export const languages: (NavLink & { lang: string; current?: boolean })[] = [
+  { label: "Nederlands", href: "/", lang: "nl", current: true },
+  { label: "English", href: "https://en.cloudconnected.nl/", lang: "en" },
 ];
 
 export const heroPoints = [

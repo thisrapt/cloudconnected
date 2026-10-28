@@ -293,8 +293,13 @@ ul {
 
 .mega li a:hover,
 .dropdown a:hover,
-.mega-all:hover {
+.mega-all:hover,
+.dropdown a.is-current {
   color: var(--orange);
+}
+
+.dropdown a.is-current {
+  font-weight: 600;
 }
 
 .mega-grid {

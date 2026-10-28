@@ -136,7 +136,13 @@ export default function Header() {
               <ul className="dropdown">
                 {languages.map((lang) => (
                   <li key={lang.href}>
-                    <a href={lang.href} hrefLang={lang.label === "Nederlands" ? "nl" : undefined}>
+                    <a
+                      href={lang.href}
+                      hrefLang={lang.lang}
+                      lang={lang.lang}
+                      aria-current={lang.current ? "page" : undefined}
+                      className={lang.current ? "is-current" : undefined}
+                    >
                       {lang.label}
                     </a>
                   </li>
