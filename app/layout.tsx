@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     images: [{ url: "/images/og-image.webp", width: 1280, height: 720 }],
   },
   twitter: { card: "summary_large_image" },
+  // Stop Chrome/Google from auto-translating the Dutch site; English visitors use the
+  // English option in the language menu instead.
+  other: { google: "notranslate" },
   icons: {
     icon: "/images/cropped-logo-full-color-svg-1-32x32.webp",
     apple: "/images/cropped-logo-full-color-svg-1-180x180.webp",
@@ -38,7 +41,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="nl" className={montserrat.variable} suppressHydrationWarning>
+    <html lang="nl" translate="no" className={montserrat.variable} suppressHydrationWarning>
       <body>
         <Header />
         {children}
